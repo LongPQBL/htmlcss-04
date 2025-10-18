@@ -27,3 +27,8 @@ button {
     font-size: inherit;
     font-family: inherit;
 }
+
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+}
