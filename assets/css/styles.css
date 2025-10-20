@@ -51,19 +51,20 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 130px;
+    min-width: 190px;
     height: var(--height);
     line-height: var(--height);
     border-radius: 99px;
-    border: 1px solid rgb(0, 9, 88, 0.7);
-    color: #000958;
+    border: 1px solid rgb(255, 91, 46, 0.6);
+    color: #ff5b2e;
+    background: transparent;
     text-align: center;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .btn:hover {
-    opacity: 0.9;
+    box-shadow: 0 13px 26px -8px rgba(255, 91, 46, 0.42);
     cursor: pointer;
 }
 
@@ -131,6 +132,14 @@ button {
     --height: 50px;
 
     min-width: 118px;
+    color: #000958;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: 1px solid rgb(0, 9, 88, 0.7);
+}
+
+.header-action__btn:hover {
+    box-shadow: 0 13px 26px -8px rgb(0, 9, 88, 0.5);
 }
 
 /* Hero */
@@ -274,8 +283,7 @@ button {
 .hero__cta-btn {
     --height: 60px;
 
-    box-shadow: 0 13px 26px -8px rgba(255, 91, 46, 0.42);
-    font-size: 1.6rem;
+    font-weight: 600;
     min-width: 190px;
 }
 
@@ -684,9 +692,6 @@ button {
 
 .service__cta {
     min-width: 214px;
-    color: #ff5b2e;
-    border-color: currentColor;
-    box-shadow: 0 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
 
 /* Staff */
@@ -803,7 +808,161 @@ button {
 
 .staff__cta {
     min-width: 193px;
+}
+
+/* Pricing */
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+
+.pricing__container {
+    width: 994px;
+}
+
+.pricing__heading,
+.pricing__desc {
+    text-align: center;
+}
+
+.pricing__desc {
+    margin-left: auto;
+    margin-right: auto;
+    width: 709px;
+}
+
+.pricing__switch-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.pricing__switch-inner {
+    position: relative;
+}
+
+.pricing__switch-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 276px;
+    height: 56px;
+    padding: 0 40px;
+    border-radius: 99px;
+    border: 1px solid rgb(255, 91, 46, 0.6);
+    user-select: none;
+    cursor: pointer;
+}
+
+.pricing__switch-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100%;
+    background: #ff5b2e;
+    border-radius: inherit;
+}
+
+.pricing__switch-value {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.pricing__switch-input:checked + .pricing__switch-label::before {
+    width: 131px;
+    left: auto;
+    right: 0;
+}
+
+.pricing__switch-input:checked + .pricing__switch-label .pricing__switch-value:nth-of-type(1),
+.pricing__switch-input:not(:checked)
+    + .pricing__switch-label
+    .pricing__switch-value:nth-of-type(2) {
     color: #ff5b2e;
-    border-color: currentColor;
-    box-shadow: 0 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+.pricing__sale-off {
+    position: absolute;
+    top: -10px;
+    right: -112px;
+}
+
+.pricing__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 44px;
+    margin-top: 56px;
+}
+
+.pricing-item {
+    padding: 30px 28px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.pricing-item:hover {
+    box-shadow: 0 20px 44px 0 rgba(195, 108, 22, 0.06);
+}
+
+.pricing-item__type {
+    color: #ff5b2e;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.pricing-item__heading {
+    margin-top: 8px;
+    color: #3f4065;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.pricing-item__price {
+    margin-top: 24px;
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03;
+}
+
+.pricing-item__btn {
+    --height: 44px;
+
+    margin-top: 22px;
+    width: 100%;
+}
+
+.pricing-item__list {
+    margin-top: 24px;
+}
+
+.pricing-item__item {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.pricing-item__item:before {
+    content: url(../icons/price-check.svg);
+    margin-right: 14px;
+}
+
+.pricing-item__item:nth-child(n + 5):before {
+    opacity: 0.4;
+}
+
+.pricing-item:nth-child(3) .pricing-item__item:before {
+    opacity: 1;
 }
