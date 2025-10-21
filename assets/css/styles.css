@@ -123,6 +123,7 @@ button {
     line-height: 1;
 }
 
+.navbar__link--active,
 .navbar__link:hover {
     color: #000958;
     text-shadow: 1px 0 0 currentColor;
@@ -1176,4 +1177,120 @@ button {
     color: #656689;
     font-size: 1.4rem;
     line-height: 1.71;
+}
+
+/* Footer */
+.footer {
+    margin-top: 52px;
+    background: linear-gradient(to right, #fff6ed 42.7%, transparent 42.7%);
+}
+
+.footer__inner {
+    display: flex;
+}
+
+.footer__left {
+    width: 41%;
+    padding-top: 114px;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 268px;
+    height: 46px;
+    margin: 34px 0 68px;
+    border: 1px solid rgba(255, 91, 46, 0.25);
+    border-radius: 99px;
+    background: #fff;
+}
+
+.subscribe-form__input {
+    padding: 0 22px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: inherit;
+    font-size: 1.4rem;
+}
+
+.subscribe-form__input::placeholder {
+    color: #656689;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.17;
+    opacity: 0.8;
+}
+
+.subscribe-form__submit {
+    margin-right: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #ff5b2e;
+    box-shadow: 0 15px 28px -7px rgba(255, 91, 46, 0.3);
+    outline: none;
+    border: none;
+}
+
+.footer__heading {
+    color: #000958;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.11;
+}
+
+.social-list {
+    display: flex;
+    column-gap: 16px;
+    margin-top: 16px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.footer__right {
+    padding: 52px 0 52px 129px;
+}
+
+.footer__row {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 58px 137px;
+}
+
+.footer__list {
+    margin-top: 14px;
+}
+
+.footer__link {
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__copyright {
+    padding-bottom: 48px;
+    text-align: center;
+    color: #656689;
+    font-size: 1.2rem;
+    line-height: 1.17;
+    opacity: 0.5;
 }
